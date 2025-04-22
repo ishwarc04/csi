@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSI VIT PUNE-building what matters</title>
+    <link rel="shortcut icon" href="img/csi logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="static/event.css">
+    <style>
+        
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 55px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+        
+        .flip-card {
+            perspective: 1000px;
+            height: 450px; 
+            width: 450px;
+            margin: 0 auto; 
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            border-radius: 15px;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .flip-card-front {
+            background-color: yellow;
+        }
+        
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .flip-card-back {
+            background-color:rgba(234, 226, 183, 1);
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .flip-card-back p {
+            margin: 8px 0;
+            font-size: 1em;
+        }
+        
+        @media (max-width: 1000px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body bgcolor="520000" >
+    <header>
+    <nav>
+        <img  id="i1" src="img/csi logo.png" height="29px"  alt="" >
+        <a id="a7" href="csi.html">CSI VIT PUNE</a>
+        <a id="a2" href="about.html">About us</a>
+        <a id="a3" href="event.html">Event</a>
+        <a id="a4" href="Team.html">Team</a>
+        <a id="a5" href="register.html">Register</a>
+        
+    </nav>
+   
+    </header>
+    
+    <main>
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/mlops.jpg" alt="MLOPS Workshop">
+                    </div>
+                    <div class="flip-card-back">
+                        <p ><b><font size="6">February 12 - 16, 2025</font></b></p>
+                        <p><b><font size="6">MLOPS Workshop</font></b></p>
+                        <p><b><font size="6">VIT Pune</font></b></p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/gsoc.jpg" alt="Placement Guidance Talk">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b><font size="6">November 2023</font></b></p>
+                        <p><b><font size="6">Placement Guidance Talk</font></b></p>
+                        <p><b><font size="6">Auditorium, VIT Pune</font></b></p>
+                      
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/byte.jpg" alt="Byte Banker">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b><font size="6">January 20 2025</font></b></p>
+                        <p><b><font size="6">Byte Banker</font></b></p>
+                        <p><b><font size="6">Sharad Arena</font></b></p>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/e1.png" alt="LLM Workshop">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b><font size="6">February 12 - 16, 2024</font></b></p>
+                        <p><b><font size="6">LLM Workshop</font></b></p>
+                        <p><b><font size="6">VIT Pune</font></b></p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 5 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/e2.png" alt="Placement Guidance Talk">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b><font size="6">November 2023</font></b></p>
+                        <p><b><font size="6">Placement Guidance Talk</font></b></p>
+                        <p><b><font size="6">Auditorium, VIT Pune</font></b></p>
+                      
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 6 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="img/cz.jpg" alt="Byte Banker">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b><font size="6">January 20 2025</font></b></p>
+                        <p><b><font size="6">Byte Banker</font></b></p>
+                        <p><b><font size="6">Sharad Arena</font></b></p>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        
+        <table>
+            <tr>
+            <td><img style="border-radius: 30px;" src="img/mlops.jpg" alt=""  height="450px" width="470px"> <br><br><br> &nbsp; &nbsp; &nbsp; &nbsp;       
+            </td>
+            
+            <td><img style="border-radius: 30px;" src="img/gsoc.jpg" alt="" height="450px" width="470px"> <br><br><br>&nbsp; &nbsp; &nbsp; &nbsp;    </td>
+            <td><img style="border-radius: 30px;" src="img/byte.jpg" alt="" height="450px" width="470px"><br><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </td>
+            </tr>
+            
+            <tr>
+                
+                <td> <font color="beige" size="5.6"><center>
+                    <p>February 12 - 16, 2025 </p>
+                    <p>MLOPS Workshop </p>
+                    <p>VIT Pune</p><br><br><br>
+    
+                    
+                    </p>
+                    </center>
+                    </font>
+                </td>
+                <td>
+                    <font color="beige" size="5.6"><center>
+                        <p>November 2023 </p>
+                        <p>Placement Guidance Talk </p>
+                        <p>Auditorium, VIT Pune</p>
+                        <br><br><br>
+                    </center>
+                    </font>
+                </td>
+           
+            
+            <td>
+                <font color="beige" size="5.6"><center>
+                    <p>January 20  2025 </p>
+                    <p>Byte Banker </p>
+                    <p>Sharad Arena</p>
+                    <br><br><br>
+                    
+                </center>
+                </font>
+                
+            </td>
+
+            
+               
+            </tr>
+            
+            <div>
+            <tr class="i9">
+                 <td>
+                   
+                    <img style="border-radius: 30px;" src="img/e1.png" alt=""  height="450px" width="470px">  &nbsp; &nbsp; &nbsp; &nbsp;     
+                </td>
+                <td><img style="border-radius: 30px;" src="img/e2.png" alt="" height="450px" width="470px" > &nbsp; &nbsp; &nbsp; &nbsp;    </td>
+                <td><img style="border-radius: 30px;" src="img/cz.jpg" alt="" height="450px" width="470px">&nbsp; &nbsp; &nbsp; &nbsp; </td>
+                </tr>
+                <tr>
+                    <td> <font color="beige" size="5.6"><center>
+                        <p>February 12 - 16, 2024 </p>
+                        <p>LLM Workshop </p>
+                        <p>VIT Pune </p>
+                       
+                        
+                        
+                        </center>
+                        </font>
+                    </td>
+                    <td>
+                        <font color="beige" size="5.6"><center>
+                            <p>November 2023 </p>
+                            <p>Placement Guidance Talk </p>
+                            <p>Auditorium, VIT Pune </p>
+                           
+                        </center>
+                        </font>
+                    </td>
+               
+                <td>
+                    <font color="beige" size="5.6"><center>
+                        <p>January 20  2025 </p>
+                        <p>Byte Banker </p>
+                        <p>Sharad Arena </p>
+                        
+                    </center>
+                    </font>
+                </td>
+    
+                
+                   
+                </tr>
+            </div>
+            
+        </table>
+        
+         -->
+    </main>
+
+    <!-- <footer>
+        <table width="100%" bgcolor="beige">
+            <tr>
+                <td align="center" >
+                    <font size="5" color="maroon"><b>© 2025 CSI VIT PUNE 2024-25</b>
+                        <p color="lightgray">All rights reserved </p>
+                    <a href="https://www.instagram.com/csi_vitpune/"><img src="img/insta.jpg" alt="" height="20px"> Instagram &nbsp; &nbsp;</a>
+                    <a href="https://in.linkedin.com/company/computer-society-of-india-vit-pune"><img src="img/in.jpg" alt="" height="26px">Linked.in&nbsp; &nbsp;</a>
+                    <a href="https://x.com/csi_vitpune"><img src="img/twitter.jpg" alt="" height="20px">Twitter</a>
+                     
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </footer> -->
+
+    <!-- <footer>
+        <table id="r4" width="100%" bgcolor="">
+            <tr>
+                <td align="center" >
+                    <font size="5" color="white"><b>© 2025 CSI VIT PUNE 2024-25</b>
+                    <p color="white">All rights reserved </p>
+                    <br>
+                    <a href="https://www.instagram.com/csi_vitpune/"><img class="if" src="img/insta.jpg" alt="" height="20px"> Instagram &nbsp; &nbsp;</a>
+                    <a href="https://in.linkedin.com/company/computer-society-of-india-vit-pune"><img class="if" src="img/in.jpg" alt="" height="26px">Linked.in&nbsp; &nbsp;</a>
+                    <a href="https://x.com/csi_vitpune"><img class="if" src="img/twitter.jpg" alt="" height="20px">Twitter</a>
+                     
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </footer> -->
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About [CSI-VIT pune]</h3>
+                <p>Welcome to the official website of the Computer Society of India, Student Branch, VIT Pune. We’re all about ideating, envisioning, debugging, and ultimately - building what matters!</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/event.html">Events</a></li>
+                    <li><a href="/Team.html">Team</a></li>
+                    <li><a href="/register.html">Register</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> cis24@vit.edu</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-map-marker-alt"></i>Pune, India</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 [CSI-VIT PUNE]. All Rights Reserved. | Designed  by [Ishwar]</p>
+        </div>
+    </footer>
+</html>
+
