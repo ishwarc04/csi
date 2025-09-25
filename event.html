@@ -6,16 +6,179 @@
     <title>CSI VIT PUNE-building what matters</title>
     <link rel="shortcut icon" href="img/csi logo.png" type="image/x-icon">
     <link rel="stylesheet" href="static/event.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        
-        
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: linear-gradient(to right, #903546, #1D0C0F);
+            transition: opacity 0.2s ease-out;
+            z-index: -1;
+        }
+        nav{
+            background: linear-gradient(to bottom, #000000,#2D0D0D );  
+            opacity: 0.9;
+            display: flex;
+            position: relative;
+            height: 80px;
+            width: 1700px;
+            align-items: center;
+            z-index: 1;
+        }
+        #i1{
+            padding-left: 50px;
+            height: 50px;
+        }
+        #a7{
+            font-family: arial;
+            padding-left: 10px;
+            font-weight: bold;
+            font-size: 25px;
+            padding-right: 550px;
+        }
+        #a2:hover,#a3:hover,#a4:hover,#a5:hover{
+            transition: 1s;
+            opacity: 1s;
+            color:#8f044c ;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        a{
+            text-decoration: none;
+            padding-left: 80px;
+            color: white;
+            font-size: 20px;
+        }
+        #bgi{
+            position: relative;
+            display: inline-block;
+            margin-top: 75px;
+            object-fit: cover;
+        }
+        #t1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: absolute;
+            top: 30%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white;
+            font-size: 55px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+        #t2{
+            font-family: arial;
+            position: absolute;
+            top: 43%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        }
+        #bgi::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        button{
+            font-family: arial;
+            position: absolute;
+            top: 57%; 
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            background-color: rgb(139, 138, 138,0.5);
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            border-radius: 19px;
+            padding: 18px;
+            padding-left: -20px;
+            padding-right: 90px;
+            border: none;
+        }
+        button:hover{
+            background-color:#8f044c ;
+        }
+
+        .site-footer {
+            background: linear-gradient(to bottom, #000000,#2D0D0D ); 
+            color: #ecf0f1;
+            padding: 30px 0 10px;
+            font-family: 'Arial', sans-serif;
+            margin-top: 50px
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+
+        .footer-section p, .footer-section li {
+            margin: 10px 0;
+        }
+
+        .footer-section a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #e74c3c;
+        }
+
+        .socials a {
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            margin-top: 20px;
+        }
+
         .cards-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 55px;
             max-width: 1200px;
             margin: 0 auto;
-            margin-top: 100px;
+            position: relative;
+            margin-top: 40px;
             margin-left: 20px;
         }
         
@@ -35,7 +198,7 @@
             border-radius: 15px;
         }
         
-        .flip-card:hover .flip-card-inner {
+        .flip-card.flipped .flip-card-inner {
             transform: rotateY(180deg);
         }
         
@@ -89,18 +252,17 @@
     </style>
 </head>
 
-<body bgcolor="520000" >
+<body bgcolor="520000">
     <header>
-    <nav>
-        <img  id="i1" src="img/csi logo.png" height="29px"  alt="" >
-        <a id="a7" href="csi.html">CSI VIT PUNE</a>
-        <a id="a2" href="about.html">About us</a>
-        <a id="a3" href="event.html">Event</a>
-        <a id="a4" href="Team.html">Team</a>
-        <a id="a5" href="register.html">Register</a>
-        
-    </nav>
-   
+      <nav>
+        <img id="i1" src="img/csi logo.png" height="350px" alt="">
+        <a id="a7" href="index.html">CSI VIT PUNE <br> Student's Branch </a>
+        <a style="padding-left:80px ;" id="a2" href="index.html">Home</a>
+        <a style="padding-left:40px ;" id="a2" href="about.html">About us</a>
+        <a style="padding-left:40px ;"id="a3" href="event.html">Event</a>
+        <a style="padding-left:40px ;"id="a4" href="Team.html">Team</a>
+        <a style="padding-left: 40px;"id="a5" href="sec.html">Login</a>
+      </nav>
     </header>
     
     <main>
@@ -112,11 +274,9 @@
                         <img src="img/mlops.jpg" alt="MLOPS Workshop">
                     </div>
                     <div class="flip-card-back">
-                        <p ><b><font size="6">February 12 - 16, 2025</font></b></p>
+                        <p><b><font size="6">February 12 - 16, 2025</font></b></p>
                         <p><b><font size="6">MLOPS Workshop</font></b></p>
                         <p><b><font size="6">VIT Pune</font></b></p>
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -131,9 +291,6 @@
                         <p><b><font size="6">November 2023</font></b></p>
                         <p><b><font size="6">Placement Guidance Talk</font></b></p>
                         <p><b><font size="6">Auditorium, VIT Pune</font></b></p>
-                      
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -148,8 +305,6 @@
                         <p><b><font size="6">January 20 2025</font></b></p>
                         <p><b><font size="6">Byte Banker</font></b></p>
                         <p><b><font size="6">Sharad Arena</font></b></p>
-                       
-                        
                     </div>
                 </div>
             </div>
@@ -164,8 +319,6 @@
                         <p><b><font size="6">February 12 - 16, 2024</font></b></p>
                         <p><b><font size="6">LLM Workshop</font></b></p>
                         <p><b><font size="6">VIT Pune</font></b></p>
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -180,8 +333,6 @@
                         <p><b><font size="6">November 2023</font></b></p>
                         <p><b><font size="6">Placement Guidance Talk</font></b></p>
                         <p><b><font size="6">Auditorium, VIT Pune</font></b></p>
-                      
-                        
                     </div>
                 </div>
             </div>
@@ -196,180 +347,31 @@
                         <p><b><font size="6">January 20 2025</font></b></p>
                         <p><b><font size="6">Byte Banker</font></b></p>
                         <p><b><font size="6">Sharad Arena</font></b></p>
-
-                        
                     </div>
                 </div>
             </div>
         </div>
-<!--        
-        <table>
-            <tr>
-            <td><img style="border-radius: 30px;" src="img/mlops.jpg" alt=""  height="450px" width="470px"> <br><br><br> &nbsp; &nbsp; &nbsp; &nbsp;       
-            </td>
-            
-            <td><img style="border-radius: 30px;" src="img/gsoc.jpg" alt="" height="450px" width="470px"> <br><br><br>&nbsp; &nbsp; &nbsp; &nbsp;    </td>
-            <td><img style="border-radius: 30px;" src="img/byte.jpg" alt="" height="450px" width="470px"><br><br><br>&nbsp; &nbsp; &nbsp; &nbsp; </td>
-            </tr>
-            
-            <tr>
-                
-                <td> <font color="beige" size="5.6"><center>
-                    <p>February 12 - 16, 2025 </p>
-                    <p>MLOPS Workshop </p>
-                    <p>VIT Pune</p><br><br><br>
-    
-                    
-                    </p>
-                    </center>
-                    </font>
-                </td>
-                <td>
-                    <font color="beige" size="5.6"><center>
-                        <p>November 2023 </p>
-                        <p>Placement Guidance Talk </p>
-                        <p>Auditorium, VIT Pune</p>
-                        <br><br><br>
-                    </center>
-                    </font>
-                </td>
-           
-            
-            <td>
-                <font color="beige" size="5.6"><center>
-                    <p>January 20  2025 </p>
-                    <p>Byte Banker </p>
-                    <p>Sharad Arena</p>
-                    <br><br><br>
-                    
-                </center>
-                </font>
-                
-            </td>
-
-            
-               
-            </tr>
-            
-            <div>
-            <tr class="i9">
-                 <td>
-                   
-                    <img style="border-radius: 30px;" src="img/e1.png" alt=""  height="450px" width="470px">  &nbsp; &nbsp; &nbsp; &nbsp;     
-                </td>
-                <td><img style="border-radius: 30px;" src="img/e2.png" alt="" height="450px" width="470px" > &nbsp; &nbsp; &nbsp; &nbsp;    </td>
-                <td><img style="border-radius: 30px;" src="img/cz.jpg" alt="" height="450px" width="470px">&nbsp; &nbsp; &nbsp; &nbsp; </td>
-                </tr>
-                <tr>
-                    <td> <font color="beige" size="5.6"><center>
-                        <p>February 12 - 16, 2024 </p>
-                        <p>LLM Workshop </p>
-                        <p>VIT Pune </p>
-                       
-                        
-                        
-                        </center>
-                        </font>
-                    </td>
-                    <td>
-                        <font color="beige" size="5.6"><center>
-                            <p>November 2023 </p>
-                            <p>Placement Guidance Talk </p>
-                            <p>Auditorium, VIT Pune </p>
-                           
-                        </center>
-                        </font>
-                    </td>
-               
-                <td>
-                    <font color="beige" size="5.6"><center>
-                        <p>January 20  2025 </p>
-                        <p>Byte Banker </p>
-                        <p>Sharad Arena </p>
-                        
-                    </center>
-                    </font>
-                </td>
-    
-                
-                   
-                </tr>
-            </div>
-            
-        </table>
-        
-         -->
     </main>
 
-    <!-- <footer>
-        <table width="100%" bgcolor="beige">
-            <tr>
-                <td align="center" >
-                    <font size="5" color="maroon"><b>© 2025 CSI VIT PUNE 2024-25</b>
-                        <p color="lightgray">All rights reserved </p>
-                    <a href="https://www.instagram.com/csi_vitpune/"><img src="img/insta.jpg" alt="" height="20px"> Instagram &nbsp; &nbsp;</a>
-                    <a href="https://in.linkedin.com/company/computer-society-of-india-vit-pune"><img src="img/in.jpg" alt="" height="26px">Linked.in&nbsp; &nbsp;</a>
-                    <a href="https://x.com/csi_vitpune"><img src="img/twitter.jpg" alt="" height="20px">Twitter</a>
-                     
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </footer> -->
-
-    <!-- <footer>
-        <table id="r4" width="100%" bgcolor="">
-            <tr>
-                <td align="center" >
-                    <font size="5" color="white"><b>© 2025 CSI VIT PUNE 2024-25</b>
-                    <p color="white">All rights reserved </p>
-                    <br>
-                    <a href="https://www.instagram.com/csi_vitpune/"><img class="if" src="img/insta.jpg" alt="" height="20px"> Instagram &nbsp; &nbsp;</a>
-                    <a href="https://in.linkedin.com/company/computer-society-of-india-vit-pune"><img class="if" src="img/in.jpg" alt="" height="26px">Linked.in&nbsp; &nbsp;</a>
-                    <a href="https://x.com/csi_vitpune"><img class="if" src="img/twitter.jpg" alt="" height="20px">Twitter</a>
-                     
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </footer> -->
-
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h3>About [CSI-VIT pune]</h3>
-                <p>Welcome to the official website of the Computer Society of India, Student Branch, VIT Pune. We’re all about ideating, envisioning, debugging, and ultimately - building what matters!</p>
-            </div>
-    
-            <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/event.html">Events</a></li>
-                    <li><a href="/Team.html">Team</a></li>
-                    <li><a href="/register.html">Register</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-section contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-envelope"></i> cis24@vit.edu</p>
-                <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                <p><i class="fas fa-map-marker-alt"></i>Pune, India</p>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2024 [CSI-VIT PUNE]. All Rights Reserved. | Designed  by [Ishwar]</p>
-        </div>
+      <footer class="site-footer">
+       
+        
+            <p style="text-align: center; font-size: 20px;">&copy; 2024 [CSI-VIT PUNE]. All Rights Reserved. | Designed  by [Ishwar]</p>
+        
     </footer>
+   
+    <script>
+        $(document).ready(function() {
+            // Add click event handler to all flip cards
+            $('.flip-card').click(function() {
+                // Toggle the 'flipped' class on the clicked card
+                $(this).toggleClass('flipped');
+                
+                // Remove 'flipped' class from all other cards
+                $('.flip-card').not(this).removeClass('flipped');
+            });
+        });
+    </script>
+   
+</body>
 </html>
-

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSI VIT Pune</title>
+   <link rel="stylesheet" href="static/sec.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("3rNRSoc-lKXpNOMpC");
+        })();
+    </script>
+</head>
+<body>
+    
+    <div id="loginPage">
+        <nav>
+            <img src="img/csi logo.png" alt="CSI Logo">
+            <a href="#">CSI VIT PUNE Student's Branch</a>
+        </nav>
+        
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <p id="loginError" class="error"></p>
+                <button type="submit">LOGIN</button>
+                <div style="text-align: center; margin-top: 15px;">
+                    <p>Not registered? <a href="#" onclick="showRegistration()">Register here</a></p>
+                    <p>Admin login? <a href="#" onclick="showAdminLogin()">Click here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+    <div id="adminLoginPage" style="display:none;">
+        <nav>
+            <img src="img/csi logo.png" alt="CSI Logo">
+            <a href="#" onclick="showLogin()">← Back to User Login</a>
+            <a href="#" style="margin-left: auto;">CSI VIT PUNE Admin</a>
+        </nav>
+        
+        <div class="login-container">
+            <h1>Admin Login</h1>
+            <form id="adminLoginForm">
+                <input type="text" id="adminUsername" placeholder="Admin ID" required>
+                <input type="password" id="adminPassword" placeholder="Password" required>
+                <p id="adminLoginError" class="error"></p>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+    </div>
+
+   
+    <div id="registrationPage" style="display:none;">
+        <nav>
+            <img src="img/csi logo.png" alt="CSI Logo">
+            <a href="#" onclick="showLogin()">← Back to Login</a>
+            <a href="#" style="margin-left: auto;">CSI VIT PUNE Student's Branch</a>
+        </nav>
+        
+        <h1 style="color: white; padding-top: 40px;">SECRETARY REGISTRATION FORM</h1>
+        <div class="registration-container">
+            <form id="secretaryForm">
+                <h2>Personal Information</h2>
+                <input type="text" id="secretary-name" placeholder="Full Name" required>
+                
+                <div class="form-row">
+                    <div>
+                        <input type="number" id="secretary-age" placeholder="Age" min="16" max="30" required>
+                    </div>
+                    <div>
+                        <select id="secretary-gender" required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h2>Contact Information</h2>
+                <input type="email" id="secretary-email" placeholder="Institute Email" required>
+                <input type="tel" id="secretary-phone" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+                
+                <h2>Academic Information</h2>
+                <input type="text" id="secretary-prn" placeholder="PRN Number" required>
+                <select id="secretary-domain" required>
+                    <option value="" disabled selected>Select Domain</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Literary">Literary</option>
+                    <option value="Social">Social Service</option>
+                </select>
+                
+                <h2>Security</h2>
+                <input type="password" id="secretary-password" placeholder="Create Password" required>
+                
+                <button type="submit">REGISTER</button>
+                <p id="registerError" class="error"></p>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="adminPage" style="display:none;">
+        <nav>
+            <img src="img/csi logo.png" alt="CSI Logo">
+            <a href="#" onclick="logout()">← Logout</a>
+            <a href="#" style="margin-left: auto;">CSI VIT PUNE Admin Panel</a>
+        </nav>
+        
+        <div class="admin-container">
+            <h1>Member Management</h1>
+            
+            <div class="form-row">
+                <input type="text" id="searchMember" placeholder="Search members...">
+                <button onclick="searchMembers()">Search</button>
+            </div>
+            
+            <table class="member-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>PRN</th>
+                        <th>Domain</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="memberTableBody">
+                  
+                </tbody>
+            </table>
+            
+            <button onclick="showAddMemberForm()" style="margin-top: 20px;">+ Add New Member</button>
+            
+            <div id="addMemberForm" style="display: none; margin-top: 20px;">
+                <h2>Add New Member</h2>
+                <form id="newMemberForm">
+                    <input type="text" id="newMemberName" placeholder="Full Name" required>
+                    <input type="email" id="newMemberEmail" placeholder="Email" required>
+                    <input type="text" id="newMemberPrn" placeholder="PRN" required>
+                    <select id="newMemberDomain" required>
+                        <option value="" disabled selected>Select Domain</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Literary">Literary</option>
+                        <option value="Social">Social Service</option>
+                    </select>
+                    <input type="password" id="newMemberPassword" placeholder="Password" required>
+                    <div class="form-row">
+                        <button type="submit">Add Member</button>
+                        <button type="button" onclick="hideAddMemberForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/sec.js">
+        
+       
+    </script>
+</body>
+</html>
